@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="496bde9a-f2e5-41c6-ad3d-244129737e6a" name="Default Changelist" comment="Add nasty api calls and create all posts screen">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/space/stanton/technicaltest/PostDetailActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/space/stanton/technicaltest/PostListActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_post_details.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/post_by_id.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/post_comments.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/space/stanton/technicaltest/ApiCalls.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/space/stanton/technicaltest/ApiCalls.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/space/stanton/technicaltest/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Toby_Ten_Pixel_3a_XL_]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileColors">
+    <fileColor scope="Non-Project Files (Material Default)" color="415967" />
+    <fileColor scope="Non-Project Files (Material Darker)" color="474747" />
+    <fileColor scope="Non-Project Files (Material Lighter)" color="D2D4D5" />
+    <fileColor scope="Non-Project Files (Material Palenight)" color="4E5579" />
+    <fileColor scope="Non-Project Files (Material Default)" color="2E3C43" />
+    <fileColor scope="Non-Project Files (Material Darker)" color="323232" />
+    <fileColor scope="Non-Project Files (Material Lighter)" color="eae8e8" />
+    <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
+    <fileColor scope="Non-Project Files (Material Oceanic)" color="2E3C43" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Object" />
+        <option value="layoutResourceFile_vertical" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="fix2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1s1XvdpYi7j8Xm8Zcuq91D45gn1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.project.structure.last.selected" value="SDK Location" />
+    <property name="android.project.structure.proportion" value="0.15" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea/dictionaries" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.idea/dictionaries" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/raw" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="Technical_test.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="496bde9a-f2e5-41c6-ad3d-244129737e6a" name="Default Changelist" comment="" />
+      <created>1620041300322</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620041300322</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <created>1620044612652</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620044612653</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add project dictionary">
+      <created>1620044759473</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620044759473</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Untrack gitignore files">
+      <created>1620051012493</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1620051012493</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Untrack gitignore files">
+      <created>1620051057341</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1620051057342</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add fixed intellij files files">
+      <created>1620056568694</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620056568694</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add nasty api calls and create all posts screen">
+      <created>1620056612167</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1620056612167</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <MESSAGE value="Add project dictionary" />
+    <MESSAGE value="Untrack gitignore files" />
+    <MESSAGE value="Add fixed intellij files files" />
+    <MESSAGE value="Add nasty api calls and create all posts screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add nasty api calls and create all posts screen" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="200" y="1" key="#Project_Structure" timestamp="1620050668470">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="200" y="1" key="#Project_Structure/0.0.1680.1050@0.0.1680.1050" timestamp="1620050668470" />
+    <state x="517" y="0" key="#app" timestamp="1620060257156">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="517" y="0" key="#app/0.0.1680.1050@0.0.1680.1050" timestamp="1620060257156" />
+    <state x="580" y="190" key="#com.intellij.ide.util.MemberChooser" timestamp="1620053721159">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="580" y="190" key="#com.intellij.ide.util.MemberChooser/0.25.1680.1025@0.25.1680.1025" timestamp="1620053721159" />
+    <state x="543" y="205" width="962" height="681" key="#xdebugger.evaluate" timestamp="1620053534561">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="543" y="184" width="962" height="681" key="#xdebugger.evaluate/0.0.1680.1050@0.0.1680.1050" timestamp="1620052625658" />
+    <state x="543" y="205" key="#xdebugger.evaluate/0.25.1680.1025@0.25.1680.1025" timestamp="1620053534561" />
+    <state x="200" y="102" width="1480" height="846" key="AVDManager" timestamp="1620056938303">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="200" y="102" width="1480" height="846" key="AVDManager/0.0.1680.1050@0.0.1680.1050" timestamp="1620056938303" />
+    <state x="200" y="125" width="1480" height="825" key="AVDManager/0.25.1680.1025@0.25.1680.1025" timestamp="1620055144525" />
+    <state x="425" y="270" key="AndroidCreateResourceFileDialog" timestamp="1620058360087">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="425" y="270" key="AndroidCreateResourceFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1620058360087" />
+    <state x="425" y="289" key="AndroidCreateResourceFileDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1620053849607" />
+    <state x="661" y="295" key="AndroidCreateXmlResourceDialog" timestamp="1620055816557">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="661" y="277" key="AndroidCreateXmlResourceDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1620043094157" />
+    <state x="661" y="295" key="AndroidCreateXmlResourceDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1620055816557" />
+    <state x="168" y="91" key="DiffContextDialog" timestamp="1620051038041">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="168" y="91" key="DiffContextDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1620051038041" />
+    <state width="1680" height="348" key="GridCell.Tab.0.bottom" timestamp="1620060524952">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="348" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1620060524952" />
+    <state width="1680" height="248" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1620059911789" />
+    <state width="1680" height="348" key="GridCell.Tab.0.center" timestamp="1620060524952">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="348" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1620060524952" />
+    <state width="1680" height="248" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1620059911788" />
+    <state width="1680" height="348" key="GridCell.Tab.0.left" timestamp="1620060524951">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="348" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1620060524951" />
+    <state width="1680" height="248" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1620059911787" />
+    <state width="1680" height="348" key="GridCell.Tab.0.right" timestamp="1620060524952">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="348" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1620060524952" />
+    <state width="1680" height="248" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1620059911788" />
+    <state x="168" y="91" key="MergeDialog" timestamp="1620051078435">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="168" y="91" key="MergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1620051078435" />
+    <state x="386" y="226" key="MultipleFileMergeDialog" timestamp="1620051099097">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="386" y="226" key="MultipleFileMergeDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1620051099097" />
+    <state x="254" y="73" key="SettingsEditor" timestamp="1620061567126">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="254" y="73" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1620061567126" />
+    <state x="340" y="180" key="Vcs.Push.Dialog.v2" timestamp="1620056614009">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="340" y="180" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1620056614009" />
+    <state x="512" y="410" key="git4idea.ui.GitStashDialog" timestamp="1620049876145">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="512" y="410" key="git4idea.ui.GitStashDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1620049876145" />
+    <state x="512" y="345" key="git4idea.ui.GitUnstashDialog" timestamp="1620051099254">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="512" y="345" key="git4idea.ui.GitUnstashDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1620051099254" />
+    <state x="421" y="0" width="838" height="1050" key="search.everywhere.popup" timestamp="1620062788910">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="421" y="0" width="838" height="1050" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1620062788910" />
+    <state x="421" y="25" width="838" height="1025" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1620056054949" />
+  </component>
+</project>

@@ -14,8 +14,7 @@ code.
 ## The API
 
 You will need to use the following endpoints from the [JSON
-placeholder](https://jsonplaceholder.typicode.com) API to complete the take home
-test:
+placeholder](https://jsonplaceholder.typicode.com) API to complete the home tasks:
 
     GET https://jsonplaceholder.typicode.com/posts/
 
@@ -23,7 +22,7 @@ test:
 
     GET https://jsonplaceholder.typicode.com/posts/{POST_ID}/comments/
 
-## Home Tasks
+## Home tasks
 
 1.  Add a button to the post details screen that navigates to a new screen
     showing a list of all comments on the post. Each item in the list should
@@ -37,7 +36,9 @@ test:
     original post list screen.
 
     The original post list and the offline post list screens should be embedded
-    in a tabbed view. The tab item for the offline post list screen should be
+    in a tabbed view. (We have already added a library for creating the tab view, to build.gradle).
+    
+    The tab item for the offline post list screen should be
     badged with the number of offline posts that have been saved. The badge
     value should update in the background (i.e., without having to open the
     offline post list screen).
@@ -45,30 +46,22 @@ test:
     Only details about the post have to be available to read offline.  Post
     comments do not have to be available offline (but it's a bonus if they are).
 
-## Provided Resources
+## Provided resources
 
 Included in the starter repository:
 
--   Some icons extracted from SFSymbols that can be used for the home tasks.
 -   API response bodies so you can complete the test if you're having
-    connection issues. (found under )
+    connection issues. (found under app/src/main/res/raw)
 -   List of API endpoints you'll need to use for the task.
-
-## Pairing Tasks
-
-1.  On the post detail screen, show the name of the author of the post next to
-    the title of the post. Post authors should be visible when offline.
-2.  Add support for swipe-to-save in the all posts list screen and
-    swipe-to-delete in the offline posts list screen. Add an indicator to items
-    in the all posts list that appears on items that are saved for offline
-    reading.
+-   You can use standard material icons where icons are appropriate
 
 ## Requirements
 
--   The project must build for Android API 21 through to API 31.
+-   The project must build for Android API 21 through to API 30.
 -   Must be written in latest version of Kotlin.
--   The project should build and run without warnings.
--   Must scale to screen sizes from 4" to 6.5".
+-   We encourage you generally to use the patterns and tools of "Modern Android Develpoment"
+-   The project should build and run without errors.
+-   Must scale to screen sizes from 4" to 6.3".
 -   All screens should be accessible using Talk-back.
 -   Error handling should be considered.
 -   You can use whatever extra libraries you like but be prepared to
@@ -79,3 +72,11 @@ Included in the starter repository:
     or a link to your repository on github or similar hosting service. 
     Please commit regularly as you carry out the task and 
     keep the commit history in tact.
+
+## Interview pairing tasks
+
+In your interview we will ask you more about your process in completing the above tasks.
+
+There will also be a short exercise where you will be paired with one of out Android team
+and given a task to develop this project further. You will have full access to internet
+resources to help you.
