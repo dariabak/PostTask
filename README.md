@@ -51,7 +51,7 @@ Included in the starter repository:
 
 -   Some icons extracted from SFSymbols that can be used for the home tasks.
 -   API response bodies so you can complete the test if you're having
-    connection issues.
+    connection issues. (found under )
 -   List of API endpoints you'll need to use for the task.
 
 ## Pairing Tasks
