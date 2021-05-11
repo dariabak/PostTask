@@ -68,7 +68,7 @@ Included in the starter repository:
     justify your choices.
 -   You should provide at least one example of a Unit Test and one example
     of an Espresso UI test
--   You Should submit the above as either a compressed git repository (zip file) 
+-   You should submit the above as either a compressed git repository (zip file) 
     or a link to your repository on github or similar hosting service. 
     Please commit regularly as you carry out the task and 
     keep the commit history in tact.
