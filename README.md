@@ -77,6 +77,6 @@ Included in the starter repository:
 
 In your interview we will ask you more about your process in completing the above tasks.
 
-There will also be a short exercise where you will be paired with one of out Android team
+There will also be a short exercise where you will be paired with one of our Android team member
 and given a task to develop this project further. You will have full access to internet
 resources to help you.
