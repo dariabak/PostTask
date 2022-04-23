@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Technical test</string>
+    <string name="posts_error_message">Error</string>
+    <string name="posts_loading_message">Loading</string>
 </resources>

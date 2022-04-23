@@ -1,16 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: "androidx.navigation.safeargs"
 apply plugin: "com.google.android.gms.oss-licenses-plugin"
 
 android {
     compileSdkVersion 32
-    buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "space.stanton.technicaltest"
+        applicationId "space"
         minSdkVersion 21
         targetSdkVersion 32
         versionCode 1
@@ -24,6 +22,7 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
@@ -72,5 +71,10 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.7.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
     implementation "com.squareup.okhttp3:logging-interceptor:3.12.0"
+
+
+    // Coroutines
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0'
 
 }
