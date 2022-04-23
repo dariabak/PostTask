@@ -14,7 +14,7 @@
         android:theme="@style/Theme.TechnicalTest"
         tools:ignore="AllowBackup">
         <activity
-            android:name=".PostListActivity"
+            android:name="space.MainActivity"
             android:label="All posts"
             >
             <intent-filter>
@@ -23,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PostDetailActivity" />
+        <activity android:name="space.post.PostDetailActivity" />
     </application>
 
 </manifest>
