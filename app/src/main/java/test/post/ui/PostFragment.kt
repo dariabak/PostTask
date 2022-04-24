@@ -30,9 +30,9 @@ class PostFragment: Fragment() {
 
         setHasOptionsMenu(true)
         binding.lifecycleOwner = this
-        val args = PostFragmentArgs.fromBundle(requireArguments())
-        (activity as? AppCompatActivity)?.supportActionBar?.title = "Post ${args.postId}"
-        postViewModel.loadPost(args.postId)
+        val postId = PostFragmentArgs.fromBundle(requireArguments()).postId
+        (activity as? AppCompatActivity)?.supportActionBar?.title = "Post $postId"
+        postViewModel.loadPost(postId)
 
         (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -59,6 +59,10 @@ class PostFragment: Fragment() {
                     binding.errorView.errorMessage.visibility = View.VISIBLE
                 }
             }
+        }
+
+        binding.commentsButton.setOnClickListener {
+            findNavController().navigate(PostFragmentDirections.actionPostFragmentToCommentsFragment(postId))
         }
 
         return binding.root
