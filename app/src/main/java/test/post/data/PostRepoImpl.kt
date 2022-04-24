@@ -10,10 +10,10 @@ import test.posts.data.PostsApi
 import javax.inject.Inject
 
 interface PostRepo {
-    suspend fun getPost(id: Int): Result<Post>
+    suspend fun getPost(id: String): Result<List<Post>>
 }
 class PostRepoImpl @Inject constructor(private val postsApi: PostsApi): PostRepo {
-    override suspend fun getPost(id: Int): Result<Post> {
+    override suspend fun getPost(id: String): Result<List<Post>> {
         val response = postsApi.getPost(id)
         val post = response.body()
         return if (response.isSuccessful && post != null) {

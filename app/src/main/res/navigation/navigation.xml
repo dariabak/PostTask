@@ -7,5 +7,18 @@
     <fragment
         android:id="@+id/postListFragment"
         android:name="test.posts.ui.PostListFragment"
-        android:label="PostListFragment" />
+        android:label="PostListFragment" >
+        <action
+            android:id="@+id/action_postListFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="test.post.ui.PostFragment"
+        android:label="PostFragment" >
+        <argument
+            android:name="post_id"
+            app:argType="string" />
+    </fragment>
 </navigation>

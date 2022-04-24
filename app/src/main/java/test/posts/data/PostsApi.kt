@@ -9,5 +9,5 @@ interface PostsApi {
     suspend fun getPosts() : Response<List<Post>>
 
     @GET("posts")
-    suspend fun getPost(@Query("id") id: Int) : Response<Post>
+    suspend fun getPost(@Query("id") id: String) : Response<List<Post>>
 }

@@ -19,14 +19,14 @@ class PostViewModel @Inject constructor(private val repo: PostRepo): ViewModel()
     init {
         _state.value = PostState.Loading(R.string.posts_loading_message)
     }
-    fun loadPost(id: Int) {
+    fun loadPost(id: String) {
         viewModelScope.launch {
             _state.value = PostState.Loading(R.string.posts_loading_message)
             val result = repo.getPost(id)
-            val posts = result.getOrNull()
+            val post = result.getOrNull()?.firstOrNull()
             val exception = result.exceptionOrNull()
             when {
-                posts != null -> _state.value = PostState.Loaded(posts)
+                post != null -> _state.value = PostState.Loaded(post)
                 exception != null -> _state.value =
                     PostState.Error(R.string.posts_error_message)
                 else -> _state.value = PostState.Error(R.string.posts_error_message)
