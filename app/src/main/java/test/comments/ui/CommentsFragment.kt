@@ -1,11 +1,15 @@
 package test.comments.ui
 
+import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import test.comments.business.CommentsState
@@ -29,12 +33,14 @@ class CommentsFragment: Fragment() {
         binding = CommentsFragmentLayoutBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = this
         linearLayoutManager = LinearLayoutManager(requireActivity())
+        setHasOptionsMenu(true)
         binding.commentsView.layoutManager = linearLayoutManager
         val postId = CommentsFragmentArgs.fromBundle(requireArguments()).postId
         commentsViewModel.loadComments(postId)
         adapter = CommentsAdapter(listOf())
         binding.commentsView.adapter = adapter
-
+        (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        (activity as? AppCompatActivity)?.supportActionBar?.title = "Comments - post $postId"
         commentsViewModel.state.observe(viewLifecycleOwner) {
             when(it) {
                 is CommentsState.Loaded -> {
@@ -59,5 +65,15 @@ class CommentsFragment: Fragment() {
             }
         }
         return binding.root
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.home -> {
+                findNavController().navigateUp()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
