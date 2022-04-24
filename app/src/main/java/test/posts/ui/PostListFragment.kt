@@ -29,12 +29,7 @@ class PostListFragment: Fragment() {
         binding.lifecycleOwner = this
         linearLayoutManager = LinearLayoutManager(requireActivity())
         binding.postListView.layoutManager = linearLayoutManager
-
-//        setUpHandler { id ->
-//
-//        }
         adapter = PostListAdapter(listOf())
-
         binding.postListView.adapter = adapter
 
         adapter.setUpHandler {
