@@ -23,16 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="496bde9a-f2e5-41c6-ad3d-244129737e6a" name="Default Changelist" comment="Add nasty api calls and create all posts screen">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/test/post/business/PostState.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/test/post/business/PostViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostRepoImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/test/post/ui/PostFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/post_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/posts/business/PostListViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/posts/business/PostListViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/post/business/PostViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/post/business/PostViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostRepoImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostRepoImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/test/posts/data/PostsApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/posts/data/PostsApi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/posts/ui/PostListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/posts/ui/PostListFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/post_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/post_layout.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

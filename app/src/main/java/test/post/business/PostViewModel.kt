@@ -22,7 +22,7 @@ class PostViewModel @Inject constructor(private val repo: PostRepo): ViewModel()
     fun loadPost(id: Int) {
         viewModelScope.launch {
             _state.value = PostState.Loading(R.string.posts_loading_message)
-            val result = repo.getPost()
+            val result = repo.getPost(id)
             val posts = result.getOrNull()
             val exception = result.exceptionOrNull()
             when {
