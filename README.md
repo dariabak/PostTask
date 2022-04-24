@@ -52,7 +52,7 @@ Included in the starter repository:
 
 -   API response bodies so you can complete the test if you're having
     connection issues. (found under app/src/main/res/raw)
--   List of API endpoints you'll need to use for the task.
+-   List of API endpoints you'll need to use for the com.technical.task.
 -   You can use standard material icons where icons are appropriate
 
 ## Requirements
@@ -70,7 +70,7 @@ Included in the starter repository:
     of an Espresso UI test
 -   You should submit the above as either a compressed git repository (zip file) 
     or a link to your repository on github or similar hosting service. 
-    Please commit regularly as you carry out the task and 
+    Please commit regularly as you carry out the com.technical.task and 
     keep the commit history in tact.
 
 ## Interview pairing tasks
@@ -78,5 +78,5 @@ Included in the starter repository:
 In your interview we will ask you more about your process in completing the above tasks.
 
 There will also be a short exercise where you will be paired with one of our Android team member
-and given a task to develop this project further. You will have full access to internet
+and given a com.technical.task to develop this project further. You will have full access to internet
 resources to help you.

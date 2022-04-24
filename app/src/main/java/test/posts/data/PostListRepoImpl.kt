@@ -4,7 +4,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
-import main.network.ApiError
+import test.network.ApiError
 import javax.inject.Inject
 
 interface PostListRepo {

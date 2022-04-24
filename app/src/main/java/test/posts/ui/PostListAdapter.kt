@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.json.JSONObject
-import test.stanton.technicaltest.R
+import test.task.R
 
 class PostListAdapter(val items: MutableList<JSONObject>, val onItemClick: (String) -> Unit) :
     RecyclerView.Adapter<PostListAdapter.PostViewHolder>() {
