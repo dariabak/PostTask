@@ -1,16 +1,20 @@
 package test.post.ui
 
+import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import test.post.business.PostState
 import test.post.business.PostViewModel
 import test.task.databinding.PostLayoutBinding
+
 
 @AndroidEntryPoint
 class PostFragment: Fragment() {
@@ -23,13 +27,17 @@ class PostFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = PostLayoutBinding.inflate(inflater, container, false)
+
+        setHasOptionsMenu(true)
         binding.lifecycleOwner = this
         val args = PostFragmentArgs.fromBundle(requireArguments())
         (activity as? AppCompatActivity)?.supportActionBar?.title = "Post ${args.postId}"
         postViewModel.loadPost(args.postId)
 
+        (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         postViewModel.state.observe(viewLifecycleOwner) {
-            when(it) {
+            when (it) {
                 is PostState.Loaded -> {
 
                     binding.post.visibility = View.VISIBLE
@@ -55,4 +63,14 @@ class PostFragment: Fragment() {
 
         return binding.root
     }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.home -> {
+               findNavController().navigateUp()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 }
