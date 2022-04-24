@@ -6,9 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.json.JSONObject
+import test.posts.data.Post
 import test.task.R
 
-class PostListAdapter(val items: MutableList<JSONObject>, val onItemClick: (String) -> Unit) :
+class PostListAdapter(var items: List<Post>) :
     RecyclerView.Adapter<PostListAdapter.PostViewHolder>() {
 
     class PostViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview)
@@ -21,14 +22,15 @@ class PostListAdapter(val items: MutableList<JSONObject>, val onItemClick: (Stri
     }
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        holder.itemView.findViewById<TextView>(R.id.title).text = items[position].getString("title")
+        holder.itemView.findViewById<TextView>(R.id.title).text = items[position].title
         holder.itemView.findViewById<TextView>(R.id.content).text =
-            items[position].getString("body")
+            items[position].body
         holder.itemView.setOnClickListener {
-            onItemClick(items[position].getString("id"))
+//            onItemClick.invoke(items[position].id.toString())
         }
     }
 
     override fun getItemCount(): Int = items.size
+
 
 }

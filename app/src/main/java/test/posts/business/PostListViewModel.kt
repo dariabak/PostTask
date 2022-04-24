@@ -17,6 +17,8 @@ class PostListViewModel @Inject constructor(private val repo: PostListRepo): Vie
     val state: LiveData<PostListState>
         get() = _state
 
+//    private val _postList = MutableLiveData<List<Post>>()
+//    val postList: LiveData<List<Post>>
     init {
         loadData()
     }
