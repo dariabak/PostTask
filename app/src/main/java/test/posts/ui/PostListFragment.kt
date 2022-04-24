@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import test.posts.business.PostListState
@@ -21,7 +20,6 @@ class PostListFragment: Fragment() {
     private lateinit var adapter: PostListAdapter
 
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,33 +27,39 @@ class PostListFragment: Fragment() {
     ): View {
         binding = PostListFragmentLayoutBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = this
-//        postsViewModel = ViewModelProvider(this)[PostListViewModel::class.java]
         linearLayoutManager = LinearLayoutManager(requireActivity())
         binding.postListView.layoutManager = linearLayoutManager
 
+//        setUpHandler { id ->
+//
+//        }
         adapter = PostListAdapter(listOf())
+
         binding.postListView.adapter = adapter
 
+        adapter.setUpHandler {
+
+        }
         postsViewModel.state.observe(viewLifecycleOwner) {
             when(it) {
                 is PostListState.Loaded -> {
                     adapter.items = it.posts
 
-//                    binding.postListView.visibility = View.VISIBLE
-//                    binding.loadingView.progressBar.visibility = View.GONE
-//                    binding.errorView.root.visibility = View.GONE
+                    binding.postListView.visibility = View.VISIBLE
+                    binding.loadingView.loading.visibility = View.GONE
+                    binding.errorView.errorMessage.visibility = View.GONE
                     adapter.notifyDataSetChanged()
                 }
                 is PostListState.Loading -> {
-//                    binding.postListView.visibility = View.GONE
-//                    binding.loadingView.progressBar.visibility = View.VISIBLE
-//                    binding.errorView.root.visibility = View.GONE
+                    binding.postListView.visibility = View.GONE
+                    binding.loadingView.loading.visibility = View.VISIBLE
+                    binding.errorView.errorMessage.visibility = View.GONE
 
                 }
                 is PostListState.Error -> {
-//                    binding.postListView.visibility = View.GONE
-//                    binding.loadingView.root.visibility = View.GONE
-//                    binding.errorView.root.visibility = View.VISIBLE
+                    binding.postListView.visibility = View.GONE
+                    binding.loadingView.loading.visibility = View.GONE
+                    binding.errorView.errorMessage.visibility = View.VISIBLE
                 }
             }
         }

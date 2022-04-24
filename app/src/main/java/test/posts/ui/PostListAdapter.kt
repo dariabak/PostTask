@@ -12,6 +12,7 @@ import test.task.R
 class PostListAdapter(var items: List<Post>) :
     RecyclerView.Adapter<PostListAdapter.PostViewHolder>() {
 
+    private lateinit var handler: (String) -> Unit
     class PostViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
@@ -26,11 +27,14 @@ class PostListAdapter(var items: List<Post>) :
         holder.itemView.findViewById<TextView>(R.id.content).text =
             items[position].body
         holder.itemView.setOnClickListener {
-//            onItemClick.invoke(items[position].id.toString())
+            handler.invoke(items[position].id.toString())
         }
     }
 
     override fun getItemCount(): Int = items.size
 
+    fun setUpHandler(handler: (String) -> Unit) {
+        this.handler = handler
+    }
 
 }
