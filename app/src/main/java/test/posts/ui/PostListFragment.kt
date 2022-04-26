@@ -9,9 +9,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.viewpager2.widget.ViewPager2
 import dagger.hilt.android.AndroidEntryPoint
 import test.posts.business.PostListState
 import test.posts.business.PostListViewModel
+import test.task.ViewPagerFragment
+import test.task.ViewPagerFragmentDirections
 import test.task.databinding.PostListFragmentLayoutBinding
 
 @AndroidEntryPoint
@@ -35,7 +38,7 @@ class PostListFragment: Fragment() {
         binding.postListView.adapter = adapter
 
         adapter.setUpHandler {
-            var action = PostListFragmentDirections.actionPostListFragmentToPostFragment(it)
+            var action = ViewPagerFragmentDirections.actionViewPagerFragmentToPostFragment(it)
             this.findNavController().navigate(action)
         }
         postsViewModel.state.observe(viewLifecycleOwner) {

@@ -8,18 +8,6 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="_nav">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="302" />
-                            <option name="y" value="-162" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="commentsFragment">
                     <value>
                       <LayoutPositions>
@@ -53,18 +41,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="postListFragment">
+                  <entry key="viewPagerFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="26" />
-                            <option name="y" value="12" />
+                            <option name="x" value="-3" />
+                            <option name="y" value="10" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_postListFragment_to_postFragment">
+                            <entry key="action_viewPagerFragment_to_postFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
