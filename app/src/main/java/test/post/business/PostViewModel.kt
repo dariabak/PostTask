@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import test.post.data.PostRepo
+import test.posts.data.Post
 import test.task.R
 import javax.inject.Inject
 
@@ -16,6 +17,7 @@ class PostViewModel @Inject constructor(private val repo: PostRepo): ViewModel()
     val state: LiveData<PostState>
         get() = _state
 
+    lateinit var postS: Post
     init {
         _state.value = PostState.Loading(R.string.posts_loading_message)
     }
@@ -23,15 +25,26 @@ class PostViewModel @Inject constructor(private val repo: PostRepo): ViewModel()
         viewModelScope.launch {
             _state.value = PostState.Loading(R.string.posts_loading_message)
             val result = repo.getPost(id)
-            val post = result.getOrNull()?.firstOrNull()
+            val post = result.getOrNull()
             val exception = result.exceptionOrNull()
             when {
-                post != null -> _state.value = PostState.Loaded(post)
+                post != null -> {
+                    _state.value = PostState.Loaded(post)
+                    postS = post
+                }
                 exception != null -> _state.value =
                     PostState.Error(R.string.posts_error_message)
                 else -> _state.value = PostState.Error(R.string.posts_error_message)
             }
 
         }
+    }
+
+    fun checkIfIsSaved(id: String) {
+
+    }
+
+    fun savePost(post: Post) {
+
     }
 }

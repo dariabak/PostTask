@@ -24,8 +24,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="496bde9a-f2e5-41c6-ad3d-244129737e6a" name="Default Changelist" comment="Add nasty api calls and create all posts screen">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/test/post/data/LocalStorage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/navigation/bottom_nav.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/comments/ui/CommentsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/comments/ui/CommentsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/post/business/PostViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/post/business/PostViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostRepoImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostRepoImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/post/ui/PostFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/post/ui/PostFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/posts/data/PostsApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/posts/data/PostsApi.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/posts/ui/PostListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/posts/ui/PostListFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/task/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/task/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/post_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/post_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +97,8 @@
         <option value="layoutResourceFile_vertical" />
         <option value="navigationResourceFile" />
         <option value="layoutResourceFile" />
+        <option value="valueResourceFile" />
+        <option value="resourceFile" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -141,6 +156,7 @@
       <recent name="$PROJECT_DIR$/.idea/dictionaries" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/navigation" />
       <recent name="$PROJECT_DIR$/app/src/main/res/raw" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
