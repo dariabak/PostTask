@@ -1,6 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext {
+        //using alpha version to make it compatible with newest kotlin version
+        compose_version = '1.2.0-alpha08'
         kotlin_version = "1.6.20"
         hilt_version = "2.41"
     }

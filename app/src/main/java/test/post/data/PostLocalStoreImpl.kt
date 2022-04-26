@@ -19,6 +19,7 @@ import javax.inject.Singleton
 interface PostLocalStore {
     fun savePost(post: Post)
     fun checkIfPostSaved(id: Int): Boolean
+    fun getListOfSavedPosts(): List<Post>
 }
 class PostLocalStoreImpl (private val context: Context): PostLocalStore {
 
@@ -72,6 +73,10 @@ class PostLocalStoreImpl (private val context: Context): PostLocalStore {
         }
 
         return isPostSaved
+    }
+
+    override fun getListOfSavedPosts(): List<Post> {
+        return getJsonArray("SavedPostList").toList()
     }
 }
 

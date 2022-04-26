@@ -7,7 +7,6 @@ import test.saved.ui.SavedPostFragment
 
 class ViewPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
 
-
     override fun getItemCount(): Int {
         return 2
     }
@@ -21,6 +20,5 @@ class ViewPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
         }
         return fragment
     }
-
 
 }

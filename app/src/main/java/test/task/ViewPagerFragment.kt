@@ -10,7 +10,6 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 class ViewPagerFragment: Fragment() {
-
     private lateinit var viewPagerAdapter: ViewPagerAdapter
     private lateinit var viewPager: ViewPager2
 
@@ -28,7 +27,10 @@ class ViewPagerFragment: Fragment() {
         viewPager.adapter = viewPagerAdapter
         val tabLayout: TabLayout = view.findViewById(R.id.tab_layout)
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            tab.text = "OBJECT ${(position + 1)}"
+            when(position) {
+                0 -> tab.text = "All posts"
+                1 -> tab.text = "Saved"
+            }
         }.attach()
     }
 
