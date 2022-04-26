@@ -21,10 +21,11 @@ interface PostLocalStore {
     fun checkIfPostSaved(id: Int): Boolean
     fun getListOfSavedPosts(): List<Post>
     fun getNumberOfSavedPosts(): Int
+    fun getSavedPost(id: Int): Post
 }
 class PostLocalStoreImpl (private val context: Context): PostLocalStore {
-
-    private fun getJsonArray(fileName: String): ArrayList<Post> {
+    private val fileName = "SavedPostList"
+    private fun getJsonArray(): ArrayList<Post> {
         var json = ""
         val gson = Gson()
         val file = File(context.filesDir, fileName)
@@ -51,8 +52,7 @@ class PostLocalStoreImpl (private val context: Context): PostLocalStore {
 
     override fun savePost(post: Post) {
         val gson = Gson()
-        val fileName = "SavedPostList"
-        var postArrayList: ArrayList<Post> = getJsonArray(fileName)
+        var postArrayList: ArrayList<Post> = getJsonArray()
         if(!checkIfPostSaved(post.id)) {
             postArrayList.add(post)
         }
@@ -63,9 +63,8 @@ class PostLocalStoreImpl (private val context: Context): PostLocalStore {
     }
 
     override fun checkIfPostSaved(id: Int): Boolean {
-        val fileName = "SavedPostList"
         var isPostSaved = false
-        var postArrayList: ArrayList<Post> = getJsonArray(fileName)
+        var postArrayList: ArrayList<Post> = getJsonArray()
         if(postArrayList.isNotEmpty()){
             var posts = postArrayList.filter{ it.id == id}.toCollection(ArrayList())
             if(posts.isNotEmpty()){
@@ -76,12 +75,18 @@ class PostLocalStoreImpl (private val context: Context): PostLocalStore {
     }
 
     override fun getListOfSavedPosts(): List<Post> {
-        return getJsonArray("SavedPostList").toList()
+        return getJsonArray().toList()
     }
 
     override fun getNumberOfSavedPosts(): Int {
-        var posts = getJsonArray("SavedPostList")
+        var posts = getJsonArray()
         return posts.size
+    }
+
+    override fun getSavedPost(id: Int): Post {
+        var posts = getJsonArray()
+        var arrayList = posts.filter { it.id == id}
+        return arrayList.first()
     }
 }
 

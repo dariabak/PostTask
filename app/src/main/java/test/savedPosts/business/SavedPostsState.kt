@@ -1,4 +1,4 @@
-package test.saved.business
+package test.savedPosts.business
 
 import test.posts.data.Post
 

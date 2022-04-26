@@ -3,7 +3,7 @@ package test.task
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import test.posts.ui.PostListFragment
-import test.saved.ui.SavedPostFragment
+import test.savedPosts.ui.SavedPostsFragment
 
 class ViewPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
 
@@ -16,7 +16,7 @@ class ViewPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
         if (position == 0) {
             fragment = PostListFragment()
         } else if (position == 1) {
-            fragment = SavedPostFragment()
+            fragment = SavedPostsFragment()
         }
         return fragment
     }

@@ -1,4 +1,4 @@
-package test.saved.data
+package test.savedPosts.data
 
 import dagger.Binds
 import dagger.Module
@@ -12,6 +12,7 @@ import javax.inject.Inject
 interface SavedPostsRepo {
     suspend fun getSavedPosts(): List<Post>
     suspend fun getNumberOfSavedPosts(): Int
+    suspend fun getSavedPost(id: Int): Post
 }
 class SavedPostsRepoImpl @Inject constructor(private val localStore: PostLocalStore): SavedPostsRepo {
 
@@ -21,6 +22,10 @@ class SavedPostsRepoImpl @Inject constructor(private val localStore: PostLocalSt
 
     override suspend fun getNumberOfSavedPosts(): Int {
         return localStore.getNumberOfSavedPosts()
+    }
+
+    override suspend fun getSavedPost(id: Int): Post {
+        return localStore.getSavedPost(id)
     }
 }
 

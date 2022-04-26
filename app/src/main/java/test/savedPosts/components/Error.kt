@@ -1,11 +1,9 @@
-package test.saved.components
+package test.savedPosts.components
 
-import android.graphics.drawable.ShapeDrawable
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -15,11 +13,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun Loading(text: String) {
+fun Error(text: String, onClick: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0.8f, 0.8f, 0.8f, 0.5f)),
+            .background(Color.White),
         contentAlignment = Alignment.Center
     ) {
         Column(
@@ -30,19 +28,16 @@ fun Loading(text: String) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            CircularProgressIndicator(
-                color = MaterialTheme.colors.onSurface,
-                modifier = Modifier.padding(5.dp, 0.dp))
-            Text(
-                text = text
-            )
+            Text(text = text)
+            Button(onClick = { onClick}) {
+
+            }
         }
     }
 }
 
-
 @Composable
 @Preview
-fun LoadingPreview() {
-    Loading("Loading")
+fun ErrorPreview() {
+    Error("Error")
 }

@@ -1,4 +1,4 @@
-package test.saved.business
+package test.savedPosts.business
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -7,8 +7,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import test.posts.data.Post
-import test.saved.data.SavedPostsRepo
-import test.task.R
+import test.savedPosts.data.SavedPostsRepo
 import javax.inject.Inject
 
 @HiltViewModel

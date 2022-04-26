@@ -39,6 +39,17 @@
         <action
             android:id="@+id/action_viewPagerFragment_to_postFragment"
             app:destination="@id/postFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_savedPostFragment"
+            app:destination="@id/savedPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedPostFragment"
+        android:name="test.savedpost.ui.SavedPostFragment"
+        android:label="SavedPostFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
     </fragment>
 
 </navigation>

@@ -1,10 +1,11 @@
-package test.saved.ui
+package test.savedPosts.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -14,29 +15,27 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.ComposeView
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import test.posts.data.Post
-import test.saved.business.SavedPostsState
-import test.saved.business.SavedPostsViewModel
-import test.saved.components.Loading
-import test.saved.components.Error
-import test.task.R
+import test.savedPosts.business.SavedPostsViewModel
+import test.task.ViewPagerFragmentDirections
 
 
 @AndroidEntryPoint
-class SavedPostFragment: Fragment() {
+class SavedPostsFragment: Fragment() {
+    private val savedPostsViewModel: SavedPostsViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -44,45 +43,51 @@ class SavedPostFragment: Fragment() {
     ): View =
         ComposeView(requireContext()).apply {
             setContent {
-                SavedPostScreen()
+                SavedPostsScreen(onClick = {
+                    this.findNavController().navigate(ViewPagerFragmentDirections.actionViewPagerFragmentToSavedPostFragment(it))
+                })
             }
     }
 }
 
 @Composable
-fun SavedPostScreen(
-    savedPostsViewModel: SavedPostsViewModel = hiltViewModel()
+fun SavedPostsScreen(
+    onClick: (Int) -> Unit
 ) {
     val savedPosts by savedPostsViewModel.savedPosts.observeAsState(initial = emptyList())
-    SavedPostList(posts = savedPosts)
+    SavedPostList(posts = savedPosts, onClick)
 }
 
 @Composable
 fun SavedPostList(
-    posts: List<Post>
+    posts: List<Post>,
+    onClick: (Int) -> Unit
 ) {
     Box(modifier = Modifier
         .fillMaxSize()
         .background(Color.White)
         .padding(10.dp)
+
     ) {
         val listState = rememberLazyListState()
         LazyColumn(state = listState) {
             items(posts) { post ->
-                SinglePost(post = post)
+                SinglePost(post = post, onClick)
             }
         }
     }
 
 }
 @Composable
-fun SinglePost(post: Post) {
+fun SinglePost(post: Post, onClick: (Int) -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .defaultMinSize(minHeight = 120.dp)
-            .padding(0.dp, 8.dp, 8.dp, 8.dp),
-
+            .padding(0.dp, 8.dp, 8.dp, 8.dp)
+            .clickable(onClick = {
+                onClick(post.id)
+            }),
     ) {
         Column(
             modifier = Modifier.fillMaxSize()
