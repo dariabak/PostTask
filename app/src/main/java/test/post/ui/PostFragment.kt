@@ -1,12 +1,14 @@
 package test.post.ui
 
 import android.R
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -27,14 +29,20 @@ class PostFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = PostLayoutBinding.inflate(inflater, container, false)
-
         setHasOptionsMenu(true)
         binding.lifecycleOwner = this
         val postId = PostFragmentArgs.fromBundle(requireArguments()).postId
         (activity as? AppCompatActivity)?.supportActionBar?.title = "Post $postId"
         postViewModel.loadPost(postId)
-
         (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        postViewModel.isSaved.observe(viewLifecycleOwner) {
+            if(it) {
+                binding.saveButton.text = "Saved"
+                binding.saveButton.isClickable = false
+                binding.saveButton.backgroundTintList = ContextCompat.getColorStateList(requireContext(), R.color.darker_gray)
+            }
+        }
 
         postViewModel.state.observe(viewLifecycleOwner) {
             when (it) {
@@ -63,6 +71,10 @@ class PostFragment: Fragment() {
 
         binding.commentsButton.setOnClickListener {
             findNavController().navigate(PostFragmentDirections.actionPostFragmentToCommentsFragment(postId))
+        }
+
+        binding.saveButton.setOnClickListener {
+            postViewModel.savePost()
         }
 
         return binding.root

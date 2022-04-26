@@ -66,6 +66,7 @@ class PostListFragment: Fragment() {
 
     override fun onResume() {
         super.onResume()
+        (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(false)
         (activity as? AppCompatActivity)?.supportActionBar?.title = "All posts"
     }
 }

@@ -18,12 +18,17 @@ class PostViewModel @Inject constructor(private val repo: PostRepo): ViewModel()
         get() = _state
 
     lateinit var postS: Post
+    private val _isSaved = MutableLiveData<Boolean>()
+    val isSaved: LiveData<Boolean>
+        get() = _isSaved
+
     init {
         _state.value = PostState.Loading(R.string.posts_loading_message)
     }
     fun loadPost(id: String) {
         viewModelScope.launch {
             _state.value = PostState.Loading(R.string.posts_loading_message)
+            checkIfIsSaved(id)
             val result = repo.getPost(id)
             val post = result.getOrNull()
             val exception = result.exceptionOrNull()
@@ -41,10 +46,11 @@ class PostViewModel @Inject constructor(private val repo: PostRepo): ViewModel()
     }
 
     fun checkIfIsSaved(id: String) {
-
+        _isSaved.value = repo.checkIfPostSaved(id)
     }
 
-    fun savePost(post: Post) {
-
+    fun savePost() {
+        repo.savePost(postS)
+        _isSaved.value = repo.checkIfPostSaved(postS.id.toString())
     }
 }
