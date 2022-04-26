@@ -6,15 +6,16 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import test.posts.data.Post
 import test.saved.data.SavedPostsRepo
 import test.task.R
 import javax.inject.Inject
 
 @HiltViewModel
 class SavedPostsViewModel @Inject constructor(private val repo: SavedPostsRepo): ViewModel() {
-    private val _state = MutableLiveData<SavedPostsState>()
-    val state: LiveData<SavedPostsState>
-        get() = _state
+    private val _savedPosts = MutableLiveData<List<Post>>()
+    val savedPosts: LiveData<List<Post>>
+        get() = _savedPosts
 
     init {
         loadData()
@@ -22,10 +23,7 @@ class SavedPostsViewModel @Inject constructor(private val repo: SavedPostsRepo):
 
     fun loadData() {
         viewModelScope.launch {
-            _state.value =  SavedPostsState.Loading(R.string.posts_loading_message)
-            val savedPosts = repo.getSavedPosts()
-
-            _state.value = SavedPostsState.Loaded(savedPosts)
+            _savedPosts.value = repo.getSavedPosts()
         }
     }
 }

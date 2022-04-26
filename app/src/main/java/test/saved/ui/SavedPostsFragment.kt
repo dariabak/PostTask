@@ -12,6 +12,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -52,21 +53,8 @@ class SavedPostFragment: Fragment() {
 fun SavedPostScreen(
     savedPostsViewModel: SavedPostsViewModel = hiltViewModel()
 ) {
-    val state = savedPostsViewModel.state.observeAsState(SavedPostsState.Loading(R.string.posts_loading_message))
-
-    when (val value = state.value) {
-        is SavedPostsState.Loading -> {
-            Loading(stringResource(value.stringRes))
-        }
-        is SavedPostsState.Loaded -> {
-            SavedPostList(posts = value.posts)
-        }
-        is SavedPostsState.Error -> {
-            Error(text = stringResource(id = value.stringRes)) {
-                savedPostsViewModel.loadData()
-            }
-        }
-    }
+    val savedPosts by savedPostsViewModel.savedPosts.observeAsState(initial = emptyList())
+    SavedPostList(posts = savedPosts)
 }
 
 @Composable

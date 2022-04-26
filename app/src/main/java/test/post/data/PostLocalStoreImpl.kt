@@ -72,7 +72,6 @@ class PostLocalStoreImpl (private val context: Context): PostLocalStore {
                 isPostSaved = true
             }
         }
-
         return isPostSaved
     }
 
