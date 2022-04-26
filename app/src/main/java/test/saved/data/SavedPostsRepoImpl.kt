@@ -11,11 +11,16 @@ import javax.inject.Inject
 
 interface SavedPostsRepo {
     suspend fun getSavedPosts(): List<Post>
+    suspend fun getNumberOfSavedPosts(): Int
 }
 class SavedPostsRepoImpl @Inject constructor(private val localStore: PostLocalStore): SavedPostsRepo {
 
     override suspend fun getSavedPosts(): List<Post> {
         return localStore.getListOfSavedPosts()
+    }
+
+    override suspend fun getNumberOfSavedPosts(): Int {
+        return localStore.getNumberOfSavedPosts()
     }
 }
 

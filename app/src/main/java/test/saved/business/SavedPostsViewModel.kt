@@ -25,12 +25,7 @@ class SavedPostsViewModel @Inject constructor(private val repo: SavedPostsRepo):
             _state.value =  SavedPostsState.Loading(R.string.posts_loading_message)
             val savedPosts = repo.getSavedPosts()
 
-            when {
-                savedPosts != null -> {
-                    _state.value = SavedPostsState.Loaded(savedPosts)
-                }
-                else -> _state.value = SavedPostsState.Error(R.string.posts_error_message)
-            }
+            _state.value = SavedPostsState.Loaded(savedPosts)
         }
     }
 }

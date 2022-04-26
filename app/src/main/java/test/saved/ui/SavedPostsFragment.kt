@@ -114,7 +114,9 @@ fun SinglePost(post: Post) {
             Divider(
                 color = Color.Gray,
                 thickness = 1.dp,
-                modifier = Modifier.padding(0.dp, 20.dp, 0.dp, 0.dp)
+                modifier = Modifier
+                    .padding(0.dp, 20.dp, 0.dp, 0.dp)
+                    .fillMaxWidth()
             )
 
         }

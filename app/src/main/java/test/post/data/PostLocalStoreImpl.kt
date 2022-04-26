@@ -20,6 +20,7 @@ interface PostLocalStore {
     fun savePost(post: Post)
     fun checkIfPostSaved(id: Int): Boolean
     fun getListOfSavedPosts(): List<Post>
+    fun getNumberOfSavedPosts(): Int
 }
 class PostLocalStoreImpl (private val context: Context): PostLocalStore {
 
@@ -77,6 +78,11 @@ class PostLocalStoreImpl (private val context: Context): PostLocalStore {
 
     override fun getListOfSavedPosts(): List<Post> {
         return getJsonArray("SavedPostList").toList()
+    }
+
+    override fun getNumberOfSavedPosts(): Int {
+        var posts = getJsonArray("SavedPostList")
+        return posts.size
     }
 }
 
