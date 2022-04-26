@@ -24,21 +24,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="496bde9a-f2e5-41c6-ad3d-244129737e6a" name="Default Changelist" comment="Add nasty api calls and create all posts screen">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/test/savedpost/business/SavedPostViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/test/savedpost/ui/SavedPostFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostLocalStoreImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostLocalStoreImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/saved/business/SavedPostsState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/business/SavedPostsState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/saved/business/SavedPostsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/business/SavedPostsViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/saved/components/Error.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/components/Error.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/saved/components/Loading.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/components/Loading.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/saved/data/SavedPostsRepoImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/data/SavedPostsRepoImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/saved/ui/SavedPostsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/ui/SavedPostsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/task/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/task/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/task/ViewPagerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/task/ViewPagerAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/task/ViewPagerViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/task/ViewPagerViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/ui/SavedPostsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/ui/SavedPostsFragment.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -43,15 +44,21 @@ class SavedPostsFragment: Fragment() {
     ): View =
         ComposeView(requireContext()).apply {
             setContent {
-                SavedPostsScreen(onClick = {
+                SavedPostsScreen(savedPostsViewModel = savedPostsViewModel, onClick = {
                     this.findNavController().navigate(ViewPagerFragmentDirections.actionViewPagerFragmentToSavedPostFragment(it))
                 })
             }
+    }
+    override fun onResume() {
+        super.onResume()
+        (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        (activity as? AppCompatActivity)?.supportActionBar?.title = "All posts"
     }
 }
 
 @Composable
 fun SavedPostsScreen(
+    savedPostsViewModel: SavedPostsViewModel,
     onClick: (Int) -> Unit
 ) {
     val savedPosts by savedPostsViewModel.savedPosts.observeAsState(initial = emptyList())
