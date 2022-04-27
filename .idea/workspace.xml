@@ -24,14 +24,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="496bde9a-f2e5-41c6-ad3d-244129737e6a" name="Default Changelist" comment="Add nasty api calls and create all posts screen">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/ui/SavedPostsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/ui/SavedPostsFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/test/stanton/technicaltest/PostListRepoMock.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/test/stanton/technicaltest/PostListViewModelTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/test/stanton/technicaltest/ExampleUnitTest.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/daria/.android/avd/Pixel_4_API_29.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -156,7 +159,7 @@
       <recent name="test" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager" selected="Gradle.PostListViewModelTest.loadData_WhenFailure_ChangeStateFromLoadingToError">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -300,6 +303,69 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PostListViewModelTest.loadData_CallsRepoGetPosts" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;test.stanton.technicaltest.PostListViewModelTest.loadData_CallsRepoGetPosts&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:testDebugUnitTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="PostListViewModelTest.loadData_WhenFailure_ChangeStateFromLoadingToError" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;test.stanton.technicaltest.PostListViewModelTest.loadData_WhenFailure_ChangeStateFromLoadingToError&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:testDebugUnitTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="PostListViewModelTest.loadData_WhenSuccessful_ChangesStateFromLoadingToLoaded" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;test.stanton.technicaltest.PostListViewModelTest.loadData_WhenSuccessful_ChangesStateFromLoadingToLoaded&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:testDebugUnitTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -318,6 +384,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.PostListViewModelTest.loadData_WhenFailure_ChangeStateFromLoadingToError" />
+        <item itemvalue="Gradle.PostListViewModelTest.loadData_WhenSuccessful_ChangesStateFromLoadingToLoaded" />
+        <item itemvalue="Gradle.PostListViewModelTest.loadData_CallsRepoGetPosts" />
         <item itemvalue="Compose Preview.LoadingPreview" />
       </list>
     </recent_temporary>
@@ -416,11 +485,6 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/test/savedpost/ui/SavedPostFragment.kt</url>
           <line>52</line>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/test/savedpost/ui/SavedPostFragment.kt</url>
-          <line>79</line>
-          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
