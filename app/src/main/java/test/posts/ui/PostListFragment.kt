@@ -5,12 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.res.stringResource
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.error_layout.view.*
 import test.posts.business.PostListState
 import test.posts.business.PostListViewModel
 import test.task.ViewPagerFragment
@@ -48,19 +50,25 @@ class PostListFragment: Fragment() {
 
                     binding.postListView.visibility = View.VISIBLE
                     binding.loadingView.loading.visibility = View.GONE
-                    binding.errorView.errorMessage.visibility = View.GONE
+                    binding.errorView.errorLayout.visibility = View.GONE
                     adapter.notifyDataSetChanged()
                 }
                 is PostListState.Loading -> {
                     binding.postListView.visibility = View.GONE
                     binding.loadingView.loading.visibility = View.VISIBLE
-                    binding.errorView.errorMessage.visibility = View.GONE
+                    binding.errorView.errorLayout.visibility = View.GONE
 
                 }
                 is PostListState.Error -> {
                     binding.postListView.visibility = View.GONE
                     binding.loadingView.loading.visibility = View.GONE
-                    binding.errorView.errorMessage.visibility = View.VISIBLE
+                    binding.errorView.errorLayout.visibility = View.VISIBLE
+
+                    binding.errorView.errorLayout.error_message.text = resources.getString(it.stringRes)
+
+                    binding.errorView.errorLayout.retry_button.setOnClickListener {
+                        postsViewModel.loadData()
+                    }
                 }
             }
         }

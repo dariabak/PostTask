@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.error_layout.view.*
 import test.post.business.PostState
 import test.post.business.PostViewModel
 import test.task.databinding.PostLayoutBinding
@@ -50,7 +51,7 @@ class PostFragment: Fragment() {
 
                     binding.post.visibility = View.VISIBLE
                     binding.loadingView.loading.visibility = View.GONE
-                    binding.errorView.errorMessage.visibility = View.GONE
+                    binding.errorView.errorLayout.visibility = View.GONE
 
                     binding.title.text = it.post.title
                     binding.body.text = it.post.body
@@ -59,12 +60,18 @@ class PostFragment: Fragment() {
                 is PostState.Loading -> {
                     binding.post.visibility = View.GONE
                     binding.loadingView.loading.visibility = View.VISIBLE
-                    binding.errorView.errorMessage.visibility = View.GONE
+                    binding.errorView.errorLayout.visibility = View.GONE
                 }
                 is PostState.Error -> {
                     binding.post.visibility = View.GONE
                     binding.loadingView.loading.visibility = View.GONE
-                    binding.errorView.errorMessage.visibility = View.VISIBLE
+                    binding.errorView.errorLayout.visibility = View.VISIBLE
+
+                    binding.errorView.errorLayout.error_message.text = resources.getString(it.stringRes)
+
+                    binding.errorView.errorLayout.retry_button.setOnClickListener {
+                        postViewModel.loadPost(postId)
+                    }
                 }
             }
         }

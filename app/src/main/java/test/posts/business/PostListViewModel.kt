@@ -31,7 +31,7 @@ class PostListViewModel @Inject constructor(private val repo: PostListRepo): Vie
                 posts != null -> _state.value = PostListState.Loaded(posts)
                 exception != null -> _state.value =
                     PostListState.Error(R.string.posts_error_message)
-                else -> _state.value = PostListState.Error(R.string.posts_error_message)
+                else -> _state.value = PostListState.Error(R.string.generic_error_message)
             }
 
         }

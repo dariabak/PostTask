@@ -24,16 +24,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="496bde9a-f2e5-41c6-ad3d-244129737e6a" name="Default Changelist" comment="Add nasty api calls and create all posts screen">
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/test/stanton/technicaltest/PostListRepoTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/test/stanton/technicaltest/PostsApiMock.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/network/ApiResult.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/comments/business/CommentsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/comments/business/CommentsViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/comments/ui/CommentsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/comments/ui/CommentsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/post/business/PostViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/post/business/PostViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/post/ui/PostFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/post/ui/PostFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/posts/business/PostListViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/posts/business/PostListViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/posts/ui/PostListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/posts/ui/PostListFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/error_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/error_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/daria/.android/avd/Pixel_4_API_29.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -42,6 +48,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -158,7 +167,7 @@
       <recent name="test" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.PostListRepoTest.repoGetPosts_WhenPostsApiReturnsErrorResponse_ReturnsFailureResult">
+  <component name="RunManager" selected="Android App.app">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -325,12 +334,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PostListViewModelTest.loadData_WhenSuccessful_ChangesStateFromLoadingToLoaded" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;test.stanton.technicaltest.PostListViewModelTest.loadData_WhenSuccessful_ChangesStateFromLoadingToLoaded&quot;" />
+        <option name="scriptParameters" value="--tests &quot;test.*&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -364,11 +373,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'test'" />
         <item itemvalue="Gradle.PostListRepoTest.repoGetPosts_WhenPostsApiReturnsErrorResponse_ReturnsFailureResult" />
         <item itemvalue="Gradle.PostListRepoTest.repoGetPostsWhenSuccessful_PostsApiReturnsSuccess" />
         <item itemvalue="Gradle.PostListRepoTest.repoGetPosts_CallsPostsApi" />
         <item itemvalue="Gradle.PostListViewModelTest.loadData_WhenFailure_ChangeStateFromLoadingToError" />
-        <item itemvalue="Gradle.PostListViewModelTest.loadData_WhenSuccessful_ChangesStateFromLoadingToLoaded" />
       </list>
     </recent_temporary>
   </component>

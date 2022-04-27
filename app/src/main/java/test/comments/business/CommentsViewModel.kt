@@ -28,7 +28,7 @@ class CommentsViewModel @Inject constructor(private val repo: CommentsRepo): Vie
                 comments != null -> _state.value = CommentsState.Loaded(comments)
                 exception != null -> _state.value =
                     CommentsState.Error(R.string.posts_error_message)
-                else -> _state.value = CommentsState.Error(R.string.posts_error_message)
+                else -> _state.value = CommentsState.Error(R.string.generic_error_message)
             }
 
         }

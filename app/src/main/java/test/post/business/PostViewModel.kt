@@ -39,7 +39,7 @@ class PostViewModel @Inject constructor(private val repo: PostRepo): ViewModel()
                 }
                 exception != null -> _state.value =
                     PostState.Error(R.string.posts_error_message)
-                else -> _state.value = PostState.Error(R.string.posts_error_message)
+                else -> _state.value = PostState.Error(R.string.generic_error_message)
             }
 
         }

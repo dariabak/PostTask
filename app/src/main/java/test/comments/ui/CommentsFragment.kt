@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.error_layout.view.*
 import test.comments.business.CommentsState
 import test.comments.business.CommentsViewModel
 import test.posts.business.PostListState
@@ -48,19 +49,25 @@ class CommentsFragment: Fragment() {
 
                     binding.commentsView.visibility = View.VISIBLE
                     binding.loadingView.loading.visibility = View.GONE
-                    binding.errorView.errorMessage.visibility = View.GONE
+                    binding.errorView.errorLayout.visibility = View.GONE
                     adapter.notifyDataSetChanged()
                 }
                 is CommentsState.Loading -> {
                     binding.commentsView.visibility = View.GONE
                     binding.loadingView.loading.visibility = View.VISIBLE
-                    binding.errorView.errorMessage.visibility = View.GONE
+                    binding.errorView.errorLayout.visibility = View.GONE
 
                 }
                 is CommentsState.Error -> {
                     binding.commentsView.visibility = View.GONE
                     binding.loadingView.loading.visibility = View.GONE
-                    binding.errorView.errorMessage.visibility = View.VISIBLE
+                    binding.errorView.errorLayout.visibility = View.VISIBLE
+
+                    binding.errorView.errorLayout.error_message.text = resources.getString(it.stringRes)
+
+                    binding.errorView.errorLayout.retry_button.setOnClickListener {
+                        commentsViewModel.loadComments(postId)
+                    }
                 }
             }
         }
