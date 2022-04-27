@@ -24,11 +24,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="496bde9a-f2e5-41c6-ad3d-244129737e6a" name="Default Changelist" comment="Add nasty api calls and create all posts screen">
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/test/stanton/technicaltest/PostListRepoMock.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/test/stanton/technicaltest/PostListViewModelTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/test/stanton/technicaltest/ExampleUnitTest.kt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostApi.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/network/ApiModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/network/ApiModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostRepoImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostRepoImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/posts/data/PostsApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/posts/data/PostsApi.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +158,7 @@
       <recent name="test" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.PostListViewModelTest.loadData_WhenFailure_ChangeStateFromLoadingToError">
+  <component name="RunManager" selected="Android App.app">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />

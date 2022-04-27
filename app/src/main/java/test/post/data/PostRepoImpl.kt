@@ -14,9 +14,9 @@ interface PostRepo {
     fun savePost(post: Post)
     fun checkIfPostSaved(id: String): Boolean
 }
-class PostRepoImpl @Inject constructor(private val postsApi: PostsApi, private val postLocalStore: PostLocalStore): PostRepo {
+class PostRepoImpl @Inject constructor(private val postApi: PostApi, private val postLocalStore: PostLocalStore): PostRepo {
     override suspend fun getPost(id: String): Result<Post> {
-        val response = postsApi.getPost(id)
+        val response = postApi.getPost(id)
         val post = response.body()
         return if (response.isSuccessful && post != null) {
             Result.success(post)

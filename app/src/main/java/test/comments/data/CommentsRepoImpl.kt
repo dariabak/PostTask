@@ -12,9 +12,9 @@ import javax.inject.Inject
 interface CommentsRepo {
     suspend fun getComments(postId: String): Result<List<Comment>>
 }
-class CommentsRepoImpl @Inject constructor(private val postsApi: PostsApi): CommentsRepo {
+class CommentsRepoImpl @Inject constructor(private val postCommentsApi: PostCommentsApi): CommentsRepo {
     override suspend fun getComments(postId: String): Result<List<Comment>> {
-            val response = postsApi.getComments(postId)
+            val response = postCommentsApi.getComments(postId)
             val comments = response.body()
             return if (response.isSuccessful && comments != null) {
                 Result.success(comments)
