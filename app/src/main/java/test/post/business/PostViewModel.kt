@@ -12,12 +12,12 @@ import test.task.R
 import javax.inject.Inject
 
 @HiltViewModel
-class PostViewModel @Inject constructor(private val repo: PostRepo): ViewModel() {
+class PostViewModel @Inject constructor(private val repo: PostRepo) : ViewModel() {
     private val _state = MutableLiveData<PostState>()
     val state: LiveData<PostState>
         get() = _state
 
-    lateinit var postS: Post
+    lateinit var singlePost: Post
     private val _isSaved = MutableLiveData<Boolean>()
     val isSaved: LiveData<Boolean>
         get() = _isSaved
@@ -25,6 +25,7 @@ class PostViewModel @Inject constructor(private val repo: PostRepo): ViewModel()
     init {
         _state.value = PostState.Loading(R.string.posts_loading_message)
     }
+
     fun loadPost(id: String) {
         viewModelScope.launch {
             _state.value = PostState.Loading(R.string.posts_loading_message)
@@ -35,7 +36,7 @@ class PostViewModel @Inject constructor(private val repo: PostRepo): ViewModel()
             when {
                 post != null -> {
                     _state.value = PostState.Loaded(post)
-                    postS = post
+                    singlePost = post
                 }
                 exception != null -> _state.value =
                     PostState.Error(R.string.posts_error_message)
@@ -50,7 +51,7 @@ class PostViewModel @Inject constructor(private val repo: PostRepo): ViewModel()
     }
 
     fun savePost() {
-        repo.savePost(postS)
-        _isSaved.value = repo.checkIfPostSaved(postS.id.toString())
+        repo.savePost(singlePost)
+        _isSaved.value = repo.checkIfPostSaved(singlePost.id.toString())
     }
 }

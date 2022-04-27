@@ -29,7 +29,7 @@ import test.posts.data.Post
 import test.savedPost.business.SavedPostViewModel
 
 @AndroidEntryPoint
-class SavedPostFragment: Fragment() {
+class SavedPostFragment : Fragment() {
     private val viewModel: SavedPostViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,6 +48,7 @@ class SavedPostFragment: Fragment() {
             }
         }
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {
@@ -79,7 +80,7 @@ private fun SavedPost(post: Post) {
         contentAlignment = Alignment.Center,
 
 
-    ) {
+        ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
 

@@ -1,6 +1,5 @@
 package test.comments.ui
 
-import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MenuItem
@@ -15,12 +14,11 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.error_layout.view.*
 import test.comments.business.CommentsState
 import test.comments.business.CommentsViewModel
-import test.posts.business.PostListState
-import test.posts.ui.PostListAdapter
+import android.R.id.home
 import test.task.databinding.CommentsFragmentLayoutBinding
 
 @AndroidEntryPoint
-class CommentsFragment: Fragment() {
+class CommentsFragment : Fragment() {
     private lateinit var binding: CommentsFragmentLayoutBinding
     private val commentsViewModel: CommentsViewModel by viewModels()
     private lateinit var adapter: CommentsAdapter
@@ -43,7 +41,7 @@ class CommentsFragment: Fragment() {
         (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         (activity as? AppCompatActivity)?.supportActionBar?.title = "Comments - post $postId"
         commentsViewModel.state.observe(viewLifecycleOwner) {
-            when(it) {
+            when (it) {
                 is CommentsState.Loaded -> {
                     adapter.items = it.comments
 
@@ -63,7 +61,8 @@ class CommentsFragment: Fragment() {
                     binding.loadingView.loading.visibility = View.GONE
                     binding.errorView.errorLayout.visibility = View.VISIBLE
 
-                    binding.errorView.errorLayout.error_message.text = resources.getString(it.stringRes)
+                    binding.errorView.errorLayout.error_message.text =
+                        resources.getString(it.stringRes)
 
                     binding.errorView.errorLayout.retry_button.setOnClickListener {
                         commentsViewModel.loadComments(postId)
@@ -76,7 +75,7 @@ class CommentsFragment: Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.home -> {
+            home -> {
                 findNavController().navigateUp()
                 true
             }

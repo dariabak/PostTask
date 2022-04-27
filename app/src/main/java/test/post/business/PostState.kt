@@ -3,7 +3,7 @@ package test.post.business
 import test.posts.data.Post
 
 sealed class PostState {
-    data class Loading(val stringRes: Int): PostState()
-    data class Error(val stringRes: Int): PostState()
-    data class Loaded(val post: Post): PostState()
+    data class Loading(val stringRes: Int) : PostState()
+    data class Error(val stringRes: Int) : PostState()
+    data class Loaded(val post: Post) : PostState()
 }

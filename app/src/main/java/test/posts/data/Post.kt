@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName
 class Post {
     @SerializedName("userId")
     val userId: Int = -1
+
     @SerializedName("id")
     val id: Int = -1
 

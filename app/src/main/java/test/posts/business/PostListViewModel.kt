@@ -11,7 +11,7 @@ import test.task.R
 import javax.inject.Inject
 
 @HiltViewModel
-class PostListViewModel @Inject constructor(private val repo: PostListRepo): ViewModel() {
+class PostListViewModel @Inject constructor(private val repo: PostListRepo) : ViewModel() {
 
     private val _state = MutableLiveData<PostListState>()
     val state: LiveData<PostListState>

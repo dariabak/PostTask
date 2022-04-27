@@ -1,7 +1,5 @@
 package test.post.ui
 
-import android.R
-import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MenuItem
@@ -16,13 +14,15 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.error_layout.view.*
 import test.post.business.PostState
 import test.post.business.PostViewModel
+import android.R.id.home
+import test.task.R
 import test.task.databinding.PostLayoutBinding
 
 
 @AndroidEntryPoint
-class PostFragment: Fragment() {
- private lateinit var binding: PostLayoutBinding
- private val postViewModel: PostViewModel by viewModels()
+class PostFragment : Fragment() {
+    private lateinit var binding: PostLayoutBinding
+    private val postViewModel: PostViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,10 +38,11 @@ class PostFragment: Fragment() {
         (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         postViewModel.isSaved.observe(viewLifecycleOwner) {
-            if(it) {
+            if (it) {
                 binding.saveButton.text = "Saved"
                 binding.saveButton.isClickable = false
-                binding.saveButton.backgroundTintList = ContextCompat.getColorStateList(requireContext(), R.color.darker_gray)
+                binding.saveButton.backgroundTintList =
+                    ContextCompat.getColorStateList(requireContext(), R.color.lightGrey)
             }
         }
 
@@ -67,7 +68,8 @@ class PostFragment: Fragment() {
                     binding.loadingView.loading.visibility = View.GONE
                     binding.errorView.errorLayout.visibility = View.VISIBLE
 
-                    binding.errorView.errorLayout.error_message.text = resources.getString(it.stringRes)
+                    binding.errorView.errorLayout.error_message.text =
+                        resources.getString(it.stringRes)
 
                     binding.errorView.errorLayout.retry_button.setOnClickListener {
                         postViewModel.loadPost(postId)
@@ -77,7 +79,11 @@ class PostFragment: Fragment() {
         }
 
         binding.commentsButton.setOnClickListener {
-            findNavController().navigate(PostFragmentDirections.actionPostFragmentToCommentsFragment(postId))
+            findNavController().navigate(
+                PostFragmentDirections.actionPostFragmentToCommentsFragment(
+                    postId
+                )
+            )
         }
 
         binding.saveButton.setOnClickListener {
@@ -86,10 +92,11 @@ class PostFragment: Fragment() {
 
         return binding.root
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.home -> {
-               findNavController().navigateUp()
+            home -> {
+                findNavController().navigateUp()
                 true
             }
             else -> super.onOptionsItemSelected(item)

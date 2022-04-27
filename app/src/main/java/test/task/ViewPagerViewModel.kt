@@ -8,7 +8,7 @@ import test.savedPosts.data.SavedPostsRepo
 import javax.inject.Inject
 
 @HiltViewModel
-class ViewPagerViewModel @Inject constructor(private val repo: SavedPostsRepo): ViewModel() {
+class ViewPagerViewModel @Inject constructor(private val repo: SavedPostsRepo) : ViewModel() {
 
     var numberOfSavedPosts = 0
 

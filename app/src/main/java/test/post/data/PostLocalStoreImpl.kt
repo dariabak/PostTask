@@ -6,14 +6,12 @@ import com.google.gson.reflect.TypeToken
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ActivityContext
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import test.posts.data.Post
 import java.io.BufferedReader
 import java.io.File
 import java.io.InputStreamReader
-import javax.inject.Inject
 import javax.inject.Singleton
 
 interface PostLocalStore {
@@ -23,7 +21,8 @@ interface PostLocalStore {
     fun getNumberOfSavedPosts(): Int
     fun getSavedPost(id: Int): Post
 }
-class PostLocalStoreImpl (private val context: Context): PostLocalStore {
+
+class PostLocalStoreImpl(private val context: Context) : PostLocalStore {
     private val fileName = "SavedPostList"
     private fun getJsonArray(): ArrayList<Post> {
         var json = ""
@@ -39,7 +38,7 @@ class PostLocalStoreImpl (private val context: Context): PostLocalStore {
                 stringBuilder.append(receiveString)
             }
             json = stringBuilder.toString()
-            if (json == ""){
+            if (json == "") {
                 return ArrayList<Post>()
             } else {
                 val postType = object : TypeToken<ArrayList<Post>>() {}.type
@@ -53,7 +52,7 @@ class PostLocalStoreImpl (private val context: Context): PostLocalStore {
     override fun savePost(post: Post) {
         val gson = Gson()
         var postArrayList: ArrayList<Post> = getJsonArray()
-        if(!checkIfPostSaved(post.id)) {
+        if (!checkIfPostSaved(post.id)) {
             postArrayList.add(post)
         }
         var jsonString = gson.toJson(postArrayList)
@@ -65,9 +64,9 @@ class PostLocalStoreImpl (private val context: Context): PostLocalStore {
     override fun checkIfPostSaved(id: Int): Boolean {
         var isPostSaved = false
         var postArrayList: ArrayList<Post> = getJsonArray()
-        if(postArrayList.isNotEmpty()){
-            var posts = postArrayList.filter{ it.id == id}.toCollection(ArrayList())
-            if(posts.isNotEmpty()){
+        if (postArrayList.isNotEmpty()) {
+            var posts = postArrayList.filter { it.id == id }.toCollection(ArrayList())
+            if (posts.isNotEmpty()) {
                 isPostSaved = true
             }
         }
@@ -85,11 +84,10 @@ class PostLocalStoreImpl (private val context: Context): PostLocalStore {
 
     override fun getSavedPost(id: Int): Post {
         var posts = getJsonArray()
-        var arrayList = posts.filter { it.id == id}
+        var arrayList = posts.filter { it.id == id }
         return arrayList.first()
     }
 }
-
 
 
 @InstallIn(SingletonComponent::class)
@@ -98,5 +96,6 @@ object LocalStorageModule {
 
     @Singleton
     @Provides
-    fun getLocalStorage(@ApplicationContext appContext: Context): PostLocalStore = PostLocalStoreImpl(appContext)
+    fun getLocalStorage(@ApplicationContext appContext: Context): PostLocalStore =
+        PostLocalStoreImpl(appContext)
 }

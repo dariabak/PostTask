@@ -11,7 +11,7 @@ import test.task.R
 import javax.inject.Inject
 
 @HiltViewModel
-class CommentsViewModel @Inject constructor(private val repo: CommentsRepo): ViewModel() {
+class CommentsViewModel @Inject constructor(private val repo: CommentsRepo) : ViewModel() {
 
     private val _state = MutableLiveData<CommentsState>()
     val state: LiveData<CommentsState>

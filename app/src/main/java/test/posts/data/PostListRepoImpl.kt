@@ -11,7 +11,7 @@ interface PostListRepo {
     suspend fun getPosts(): Result<List<Post>>
 }
 
-class PostListRepoImpl @Inject constructor(private val postsApi: PostsApi): PostListRepo {
+class PostListRepoImpl @Inject constructor(private val postsApi: PostsApi) : PostListRepo {
     override suspend fun getPosts(): Result<List<Post>> {
         val response = postsApi.getPosts()
         val posts = response.body()

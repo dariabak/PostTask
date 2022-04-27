@@ -8,12 +8,15 @@ import androidx.recyclerview.widget.RecyclerView
 import test.comments.data.Comment
 import test.task.R
 
-class CommentsAdapter(var items: List<Comment>):
+class CommentsAdapter(var items: List<Comment>) :
     RecyclerView.Adapter<CommentsAdapter.CommentsViewHolder>() {
 
-    class CommentsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
+    class CommentsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommentsAdapter.CommentsViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): CommentsAdapter.CommentsViewHolder {
         return CommentsAdapter.CommentsViewHolder(
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.comment_layout, parent, false)

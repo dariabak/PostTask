@@ -14,7 +14,9 @@ interface SavedPostsRepo {
     suspend fun getNumberOfSavedPosts(): Int
     suspend fun getSavedPost(id: Int): Post
 }
-class SavedPostsRepoImpl @Inject constructor(private val localStore: PostLocalStore): SavedPostsRepo {
+
+class SavedPostsRepoImpl @Inject constructor(private val localStore: PostLocalStore) :
+    SavedPostsRepo {
 
     override suspend fun getSavedPosts(): List<Post> {
         return localStore.getListOfSavedPosts()

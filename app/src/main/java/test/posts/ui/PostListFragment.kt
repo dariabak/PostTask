@@ -5,22 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.ui.res.stringResource
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.viewpager2.widget.ViewPager2
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.error_layout.view.*
 import test.posts.business.PostListState
 import test.posts.business.PostListViewModel
-import test.task.ViewPagerFragment
 import test.task.ViewPagerFragmentDirections
 import test.task.databinding.PostListFragmentLayoutBinding
 
 @AndroidEntryPoint
-class PostListFragment: Fragment() {
+class PostListFragment : Fragment() {
     private lateinit var binding: PostListFragmentLayoutBinding
     private val postsViewModel: PostListViewModel by viewModels()
     private lateinit var linearLayoutManager: LinearLayoutManager
@@ -44,7 +41,7 @@ class PostListFragment: Fragment() {
             this.findNavController().navigate(action)
         }
         postsViewModel.state.observe(viewLifecycleOwner) {
-            when(it) {
+            when (it) {
                 is PostListState.Loaded -> {
                     adapter.items = it.posts
 
@@ -64,7 +61,8 @@ class PostListFragment: Fragment() {
                     binding.loadingView.loading.visibility = View.GONE
                     binding.errorView.errorLayout.visibility = View.VISIBLE
 
-                    binding.errorView.errorLayout.error_message.text = resources.getString(it.stringRes)
+                    binding.errorView.errorLayout.error_message.text =
+                        resources.getString(it.stringRes)
 
                     binding.errorView.errorLayout.retry_button.setOnClickListener {
                         postsViewModel.loadData()

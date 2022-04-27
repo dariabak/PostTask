@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import org.json.JSONObject
 import test.posts.data.Post
 import test.task.R
 
@@ -13,7 +12,8 @@ class PostListAdapter(var items: List<Post>) :
     RecyclerView.Adapter<PostListAdapter.PostViewHolder>() {
 
     private lateinit var handler: (String) -> Unit
-    class PostViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview)
+
+    class PostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         return PostViewHolder(

@@ -7,5 +7,5 @@ import test.posts.data.Post
 
 interface PostApi {
     @GET("posts/{id}")
-    suspend fun getPost(@Path("id") id: String) : Response<Post>
+    suspend fun getPost(@Path("id") id: String): Response<Post>
 }

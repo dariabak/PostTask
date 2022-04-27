@@ -11,7 +11,7 @@ import test.savedPosts.data.SavedPostsRepo
 import javax.inject.Inject
 
 @HiltViewModel
-class SavedPostsViewModel @Inject constructor(private val repo: SavedPostsRepo): ViewModel() {
+class SavedPostsViewModel @Inject constructor(private val repo: SavedPostsRepo) : ViewModel() {
     private val _savedPosts = MutableLiveData<List<Post>>()
     val savedPosts: LiveData<List<Post>>
         get() = _savedPosts

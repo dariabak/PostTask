@@ -6,7 +6,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
 import test.network.ApiError
 import test.posts.data.Post
-import test.posts.data.PostsApi
 import javax.inject.Inject
 
 interface PostRepo {
@@ -14,7 +13,11 @@ interface PostRepo {
     fun savePost(post: Post)
     fun checkIfPostSaved(id: String): Boolean
 }
-class PostRepoImpl @Inject constructor(private val postApi: PostApi, private val postLocalStore: PostLocalStore): PostRepo {
+
+class PostRepoImpl @Inject constructor(
+    private val postApi: PostApi,
+    private val postLocalStore: PostLocalStore
+) : PostRepo {
     override suspend fun getPost(id: String): Result<Post> {
         val response = postApi.getPost(id)
         val post = response.body()
@@ -33,7 +36,6 @@ class PostRepoImpl @Inject constructor(private val postApi: PostApi, private val
         return postLocalStore.checkIfPostSaved(id.toInt())
     }
 }
-
 
 
 @InstallIn(ViewModelComponent::class)
