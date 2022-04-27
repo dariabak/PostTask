@@ -1,4 +1,4 @@
-package test.savedpost.business
+package test.savedPost.business
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

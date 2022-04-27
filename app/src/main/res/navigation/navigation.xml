@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/savedPostFragment"
-        android:name="test.savedpost.ui.SavedPostFragment"
+        android:name="test.savedPost.ui.SavedPostFragment"
         android:label="SavedPostFragment" >
         <argument
             android:name="id"

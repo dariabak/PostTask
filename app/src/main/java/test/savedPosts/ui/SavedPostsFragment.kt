@@ -35,7 +35,7 @@ import test.task.ViewPagerFragmentDirections
 
 
 @AndroidEntryPoint
-class SavedPostsFragment: Fragment() {
+class SavedPostsFragment : Fragment() {
     private val savedPostsViewModel: SavedPostsViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,10 +45,13 @@ class SavedPostsFragment: Fragment() {
         ComposeView(requireContext()).apply {
             setContent {
                 SavedPostsScreen(savedPostsViewModel = savedPostsViewModel, onClick = {
-                    this.findNavController().navigate(ViewPagerFragmentDirections.actionViewPagerFragmentToSavedPostFragment(it))
+                    this.findNavController().navigate(
+                        ViewPagerFragmentDirections.actionViewPagerFragmentToSavedPostFragment(it)
+                    )
                 })
             }
-    }
+        }
+
     override fun onResume() {
         super.onResume()
         (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(false)
@@ -70,10 +73,11 @@ fun SavedPostList(
     posts: List<Post>,
     onClick: (Int) -> Unit
 ) {
-    Box(modifier = Modifier
-        .fillMaxSize()
-        .background(Color.White)
-        .padding(10.dp)
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.White)
+            .padding(10.dp)
 
     ) {
         val listState = rememberLazyListState()
@@ -85,40 +89,45 @@ fun SavedPostList(
     }
 
 }
+
 @Composable
 fun SinglePost(post: Post, onClick: (Int) -> Unit) {
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .defaultMinSize(minHeight = 120.dp)
-            .padding(0.dp, 8.dp, 8.dp, 8.dp)
-            .clickable(onClick = {
-                onClick(post.id)
-            }),
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .defaultMinSize(minHeight = 120.dp)
+        .padding(0.dp, 8.dp, 8.dp, 8.dp)
     ) {
+
         Column(
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier
+                .fillMaxSize()
+                .clickable {
+                    onClick(post.id)
+                }
         ) {
-            Text(text = post.title,
+            Text(
+                text = post.title,
                 style = TextStyle(fontSize = 23.sp, color = Color.Gray),
                 fontWeight = FontWeight.Bold,
                 maxLines = 1,
                 textAlign = TextAlign.Start,
                 modifier = Modifier.padding(0.dp, 0.dp, 0.dp, 8.dp)
             )
-            Text(text = post.body,
+            Text(
+                text = post.body,
                 style = TextStyle(color = Color.Gray),
                 maxLines = 2,
                 textAlign = TextAlign.Start
             )
-            Divider(
-                color = Color.Gray,
-                thickness = 1.dp,
-                modifier = Modifier
-                    .padding(0.dp, 20.dp, 0.dp, 0.dp)
-                    .fillMaxWidth()
-            )
+
 
         }
+        Divider(
+            color = Color.Gray,
+            thickness = 1.dp,
+            modifier = Modifier
+                .padding(0.dp, 20.dp, 0.dp, 0.dp)
+                .fillMaxWidth()
+        )
     }
 }
