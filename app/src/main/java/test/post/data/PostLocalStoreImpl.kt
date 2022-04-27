@@ -39,7 +39,7 @@ class PostLocalStoreImpl (private val context: Context): PostLocalStore {
                 stringBuilder.append(receiveString)
             }
             json = stringBuilder.toString()
-            if(json == ""){
+            if (json == ""){
                 return ArrayList<Post>()
             } else {
                 val postType = object : TypeToken<ArrayList<Post>>() {}.type

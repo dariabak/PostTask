@@ -56,6 +56,7 @@ class SavedPostsFragment : Fragment() {
         super.onResume()
         (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(false)
         (activity as? AppCompatActivity)?.supportActionBar?.title = "All posts"
+        savedPostsViewModel.loadData()
     }
 }
 
@@ -87,15 +88,15 @@ fun SavedPostList(
             }
         }
     }
-
 }
 
 @Composable
 fun SinglePost(post: Post, onClick: (Int) -> Unit) {
-    Column(modifier = Modifier
-        .fillMaxSize()
-        .defaultMinSize(minHeight = 120.dp)
-        .padding(0.dp, 8.dp, 8.dp, 8.dp)
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .defaultMinSize(minHeight = 120.dp)
+            .padding(0.dp, 8.dp, 8.dp, 8.dp)
     ) {
 
         Column(
