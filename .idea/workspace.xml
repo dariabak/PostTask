@@ -23,47 +23,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="496bde9a-f2e5-41c6-ad3d-244129737e6a" name="Default Changelist" comment="Add nasty api calls and create all posts screen">
-      <change afterPath="$PROJECT_DIR$/app/src/androidTest/java/test/stanton/technicaltest/CustomTestRunner.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/androidTest/java/test/stanton/technicaltest/PostListFragmentTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/comments/business/CommentsState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/comments/business/CommentsState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/comments/business/CommentsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/comments/business/CommentsViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/comments/data/CommentsRepoImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/comments/data/CommentsRepoImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/comments/data/PostCommentsApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/comments/data/PostCommentsApi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/comments/ui/CommentsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/comments/ui/CommentsAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/comments/ui/CommentsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/comments/ui/CommentsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/network/ApiError.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/network/ApiError.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/post/business/PostState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/post/business/PostState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/post/business/PostViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/post/business/PostViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostApi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostLocalStoreImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostLocalStoreImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostRepoImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/post/data/PostRepoImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/post/ui/PostFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/post/ui/PostFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/posts/business/PostListState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/posts/business/PostListState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/posts/business/PostListViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/posts/business/PostListViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/posts/data/Post.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/posts/data/Post.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/posts/data/PostListRepoImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/posts/data/PostListRepoImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/posts/data/PostsApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/posts/data/PostsApi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/posts/ui/PostListAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/posts/ui/PostListAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/posts/ui/PostListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/posts/ui/PostListFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/savedPost/business/SavedPostViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/savedPost/business/SavedPostViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/savedPost/ui/SavedPostFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/savedPost/ui/SavedPostFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/business/SavedPostsState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/business/SavedPostsState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/business/SavedPostsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/business/SavedPostsViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/components/Error.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/components/Loading.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/data/SavedPostsRepoImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/data/SavedPostsRepoImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/ui/SavedPostsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/savedPosts/ui/SavedPostsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/task/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/task/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/task/MyApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/task/MyApp.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/task/ViewPagerFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/task/ViewPagerFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/test/task/ViewPagerViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/test/task/ViewPagerViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_post.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_post.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/test/stanton/technicaltest/PostListRepoTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/test/stanton/technicaltest/PostListRepoTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="496bde9a-f2e5-41c6-ad3d-244129737e6a" name="Default Changelist" comment="Add nasty api calls and create all posts screen" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
